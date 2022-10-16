@@ -7,7 +7,7 @@ import {
   InfoColumn,
   TextWrapper,
   Heading,
-  Subtitle
+  Subtitle,
 } from "./InfoSection.elements";
 
 const InfoSection = ({
@@ -20,28 +20,28 @@ const InfoSection = ({
   description,
   headline,
   lightText,
-  topLine
+  topLine,
 }) => {
   return (
     <>
-      <InfoSec lightBg={(lightBg, imgStart)}>h1</InfoSec>
-      <Container>
-        <InfoRow imgStart={imgStart}>
-          <InfoColumn>
-            <TextWrapper>
-              H1
-              <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
-              <Heading lightText={lightText}>{headline}</Heading>
-              <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
-              <Link to="/sign-up">
-                <Button big fontBig primary={primary}>
-                  {buttonLabel}
-                </Button>
-              </Link>
-            </TextWrapper>
-          </InfoColumn>
-        </InfoRow>
-      </Container>
+      <InfoSec lightBg={(lightBg, imgStart)}>
+        <Container>
+          <InfoRow imgStart={imgStart}>
+            <InfoColumn>
+              <TextWrapper>
+                <topLine lightTopLine={lightTopLine}>{topLine}</topLine>
+                <Heading lightText={lightText}>{headline}</Heading>
+                <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
+                <Link to="/sign-up">
+                  <Button big fontBig primary={primary}>
+                    {buttonLabel}
+                  </Button>
+                </Link>
+              </TextWrapper>
+            </InfoColumn>
+          </InfoRow>
+        </Container>
+      </InfoSec>
     </>
   );
 };
