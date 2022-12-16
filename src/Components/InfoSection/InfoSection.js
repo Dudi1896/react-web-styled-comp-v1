@@ -6,6 +6,8 @@ import {
   InfoRow,
   InfoColumn,
   TextWrapper,
+  ImgWrapper,
+  Img,
   TopLine,
   Heading,
   Subtitle,
@@ -18,6 +20,9 @@ const InfoSection = ({
   lightTopLine,
   lightTextDesc,
   buttonLabel,
+  start,
+  img,
+  alt,
   description,
   headline,
   lightText,
@@ -25,7 +30,7 @@ const InfoSection = ({
 }) => {
   return (
     <>
-      <InfoSec lightBg={(lightBg, imgStart)}>
+      <InfoSec lightBg={lightBg}>
         <Container>
           <InfoRow imgStart={imgStart}>
             <InfoColumn>
@@ -40,6 +45,9 @@ const InfoSection = ({
                 </Link>
               </TextWrapper>
             </InfoColumn>
+            <ImgWrapper start={start}>
+              <Img src={img} alt={alt} />
+            </ImgWrapper>
           </InfoRow>
         </Container>
       </InfoSec>

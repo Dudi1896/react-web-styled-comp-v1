@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { theme } from "../../theme";
 
 export const InfoSec = styled.div`
-  color: #fff;
+  color: ${({ lightText }) => (lightText ? theme.LightPrimary : theme.primaryDark)};
   padding: 160px 0;
   border: 2px solid red;
   background: ${({ lightBg }) => (lightBg ? theme.LightPrimary : theme.primaryDark )};
@@ -43,6 +43,23 @@ export const TextWrapper = styled.div`
     padding-bottom: 65px;
   }
 `;
+
+export const ImgWrapper = styled.div`
+  border: 2px dashed violet;
+  max-width: 555px;
+  display: flex;
+  justify-content: ${({ start }) => (start ? 'flex-start': 'flex-end' )};
+`;
+
+export const Img = styled.img`
+  padding-right: 0;
+  border: 0;
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  max-height: 600px;
+`;
+
 
 export const TopLine = styled.div`
   color: ${({ lightTopLine }) => (lightTopLine ? theme.LightPrimary : theme.primaryDark)};
