@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+import { theme } from "./theme";
 
 const GlobalStyles = createGlobalStyle`
     html, body {
@@ -34,6 +35,7 @@ const GlobalStyles = createGlobalStyle`
         margin-left: auto;
         padding-right: 50px;
         padding-left: 50px;
+        /* border: dashed 2px darkcyan; */
 
         @media screen and (max-wdth: 991px) {
             padding-right: 30px;
@@ -43,10 +45,10 @@ const GlobalStyles = createGlobalStyle`
 
     export const Button = styled.button`
         border-radius: 4px;
-        background: ${({primary}) => (primary ? '#4B59F7' : '#0467FB') };
+        background: ${({primary}) => (primary ? theme.purplePrimary : theme.bluePrimary) };
         white-space: nowrap;
         padding: ${({big}) => (big ? '12px 64px' : '10px 20px')};
-        color: #fff;
+        color: ${({primary}) => (primary ? theme.LightPrimary : theme.DarkPrimary )} ;
         font-size: ${({fontBig}) => (fontBig ? '20px' : '16px')};
         outline: none;
         border: none;
@@ -56,10 +58,10 @@ const GlobalStyles = createGlobalStyle`
         &:hover {
             transition: all 0.3s ease-out;
             background: #fff;
-            background: ${({primary})=> (primary ? '#0467FB' : '#4B59F7')};    
+            background: ${({primary})=> (primary ? theme.bluePrimary : theme.purplePrimary)};    
         }
 
-        @media screen  and (max-width: 960px) {
+        @media screen and (max-width: 960px) {
             width: 100%;
         }
     `

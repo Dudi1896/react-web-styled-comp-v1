@@ -8,4 +8,6 @@ export const theme ={
     MidPrimary: '#BEC9DF',
     LightPrimary: '#F8FAFC',
     mobile: '576px',
+    purplePrimary: '#4B59F7',
+    bluePrimary: '#0467FB',
 }

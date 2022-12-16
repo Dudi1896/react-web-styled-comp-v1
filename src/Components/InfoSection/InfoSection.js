@@ -6,6 +6,7 @@ import {
   InfoRow,
   InfoColumn,
   TextWrapper,
+  TopLine,
   Heading,
   Subtitle,
 } from "./InfoSection.elements";
@@ -29,7 +30,7 @@ const InfoSection = ({
           <InfoRow imgStart={imgStart}>
             <InfoColumn>
               <TextWrapper>
-                <topLine lightTopLine={lightTopLine}>{topLine}</topLine>
+                <TopLine lightTopLine={lightTopLine}>{topLine}</TopLine>
                 <Heading lightText={lightText}>{headline}</Heading>
                 <Subtitle lightTextDesc={lightTextDesc}>{description}</Subtitle>
                 <Link to="/sign-up">
