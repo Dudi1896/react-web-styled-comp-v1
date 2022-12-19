@@ -1,7 +1,7 @@
 import React from "react";
 import GlobalStyles from "./GlobalStyles";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Navbar } from "./Components";
+import { Navbar, Footer } from "./Components";
 import Home from "./Pages/HomePage/Home";
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );

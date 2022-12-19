@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
-import { theme } from "./theme";
+import { theme } from "./theme";    
 
 const GlobalStyles = createGlobalStyle`
     html, body {
@@ -64,6 +64,8 @@ const GlobalStyles = createGlobalStyle`
         @media screen and (max-width: 960px) {
             width: 100%;
         }
+
+
     `
 
     export default  GlobalStyles 

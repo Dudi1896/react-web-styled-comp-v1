@@ -7,7 +7,7 @@ export const theme ={
     DarkPrimary: '#164E63',
     MidPrimary: '#BEC9DF',
     LightPrimary: '#F8FAFC',
-    mobile: '576px',
+    mobile: '820px',
     purplePrimary: '#4B59F7',
     bluePrimary: '#0467FB',
 }
