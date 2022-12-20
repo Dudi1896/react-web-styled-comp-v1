@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { theme } from "../../theme";
 import { Link } from "react-router-dom";
+import { FaMagento } from "react-icons/fa";
 
 export const FooterContainer = styled.div`
-  background: ${({ lightBg }) =>
-    lightBg ? theme.LightPrimary : theme.primaryDark};
+  background: ${theme.primaryDark};
   padding: 4rem 0 2rem 0;
   display: flex;
   flex-direction: column;
@@ -19,8 +19,7 @@ export const FooterSubscription = styled.section`
   text-align: center;
   margin-bottom: 24px;
   padding: 24px;
-  color: ${({ lightText }) =>
-    lightText ? theme.primaryDark : theme.LightPrimary};
+  color: ${theme.LightPrimary};
 `;
 
 export const FooterSubHeading = styled.p`
@@ -43,7 +42,7 @@ export const Form = styled.form`
 
   @media screen and (max-width: ${theme.mobile}) {
     flex-direction: column;
-    width: 80%;
+    width: 100%;
   }
 `;
 
@@ -60,7 +59,7 @@ export const FormInput = styled.input`
     color: #242424;
   }
 
-  @media screen and (max-width: ${({ theme }) => theme.mobile}) {
+  @media screen and (max-width: ${theme.mobile}) {
     width: 100%;
     margin: 0 0 16px 0;
   }
@@ -71,10 +70,14 @@ export const FooterLinksContainer = styled.div`
   max-width: 1000px;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   @media screen and (max-width: ${theme.mobile}) {
-    /* flex-direction: column; */
     padding-top: 32px;
+  }
+
+  @media screen and (max-width: ${theme.mini}) {
+    flex-direction: column;
   }
 `;
 
@@ -93,9 +96,7 @@ export const FooterLinksItems = styled.div`
   margin: 16px;
   text-align: left;
   width: 190px;
-  box-sizing: border-box;
   color: #fff;
-  border: 2px dashed green;
 
   @media screen and (max-width: ${theme.mobile}) {
     margin: 0;
@@ -118,3 +119,56 @@ export const FooterLink = styled(Link)`
     transition: 0.3 ease-out;
   }
 `;
+
+export const SocialMedia = styled.section`
+  max-width: 1000px;
+  width: 100%;
+`;
+
+export const SocialMediaWrap = styled.div`
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 90%;
+max-width: 1000px;
+margin: 40px auto 0 auto;
+
+@media screen and (max-wdth: ${theme.mobile}){
+  flex-direction: column;
+}
+`;
+
+export const SocialLogo = styled(Link)`
+color: #fff;
+justify-self: start;
+cursor: pointer;
+text-decoration: none;
+font-size: 2rem;
+display: flex;
+align-items: center;
+margin-bottom: 16px;
+`;
+
+export const SocialIcon = styled(FaMagento)`
+  margin-right: 16px;
+`;
+
+export const WebsiteRights = styled.small`
+  color: #fff;
+  margin-bottom: 16px;
+`;
+
+export const SocialIcons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+`;
+
+export const SocialIconLink = styled.a`
+  color: #fff;
+  font-size: 24px;
+`;
+
+
+

@@ -20,7 +20,7 @@ const GlobalStyles = createGlobalStyle`
         Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
          "Segoe UI Symbol", "Lato", "Poppins";
         
-        @media screen and (max-wdth: 991px) {
+        @media screen and (max-wdth: ${theme.mobile}) {
             padding-right: 30px;
             padding-left: 30px; 
         }
@@ -37,7 +37,7 @@ const GlobalStyles = createGlobalStyle`
         padding-left: 50px;
         /* border: dashed 2px darkcyan; */
 
-        @media screen and (max-wdth: 991px) {
+        @media screen and (max-wdth: ${theme.mobile}) {
             padding-right: 30px;
             padding-left: 30px; 
         }
@@ -61,7 +61,7 @@ const GlobalStyles = createGlobalStyle`
             background: ${({primary})=> (primary ? theme.bluePrimary : theme.purplePrimary)};    
         }
 
-        @media screen and (max-width: 960px) {
+        @media screen and (max-width: ${theme.mobile}) {
             width: 100%;
         }
 
