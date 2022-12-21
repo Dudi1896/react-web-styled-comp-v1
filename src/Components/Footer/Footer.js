@@ -47,7 +47,6 @@ const Footer = ({ lightBg, lightText, theme }) => {
         </Form>
       </FooterSubscription>
       <FooterLinksContainer theme={theme}>
-        {/* <FooterLinksWrapper theme={theme}> */}
         
         <FooterLinksWrapper theme={theme}>
           <FooterLinksItems theme={theme}>
@@ -67,7 +66,6 @@ const Footer = ({ lightBg, lightText, theme }) => {
             <FooterLink to="/">Terms of Service</FooterLink>
           </FooterLinksItems>
           </FooterLinksWrapper>
-
         <FooterLinksWrapper theme={theme}>
           <FooterLinksItems theme={theme}>
             <FooterLinkTitle>Videos</FooterLinkTitle>
@@ -87,7 +85,6 @@ const Footer = ({ lightBg, lightText, theme }) => {
           </FooterLinksItems>
         </FooterLinksWrapper>
 
-        {/* </FooterLinksWrapper> */}
       </FooterLinksContainer>
       <SocialMedia>
         <SocialMediaWrap theme={theme}>

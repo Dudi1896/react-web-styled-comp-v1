@@ -64,8 +64,6 @@ const GlobalStyles = createGlobalStyle`
         @media screen and (max-width: ${theme.mobile}) {
             width: 100%;
         }
-
-
     `
 
     export default  GlobalStyles 

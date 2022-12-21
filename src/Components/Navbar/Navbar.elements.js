@@ -2,10 +2,11 @@ import styled from "styled-components";
 import { Container } from "../../GlobalStyles";
 import { FaMagento } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { theme } from "../../theme";
 
 export const Nav = styled.nav`
     background: #101522;
-    height: 80px;
+    height: 85px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +20,6 @@ export const NavbarContainer = styled(Container)`
     display: flex;
     justify-content: space-between;
     height: 80px;
-
     ${Container}
 `;
 
@@ -40,7 +40,7 @@ export const NavIcon = styled(FaMagento)`
 export const HamburgerIcon = styled.div`
     display: none;
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: ${theme.mobile}) {
     display: block;
     position: absolute;
     top: 12px;
@@ -55,11 +55,11 @@ export const NavMenu = styled.ul`
     align-items: center;
     text-align: center;
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: ${theme.mobile}) {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     position: absolute;
     top: 61px;
     left: ${({ click }) => (click ? 0 : "-100%")};
@@ -77,7 +77,7 @@ export const NavItem = styled.li`
         border-bottom: 2px solid #4b59f7;
     }
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: ${theme.mobile}) {
     width: 100%;
 
     &:hover {
@@ -94,7 +94,7 @@ export const NavLinks = styled(Link)`
     padding: 0.5rem 1rem;
     height: 100%;
 
-  @media screen and (max-width: 960px) {
+  @media screen and (max-width: ${theme.mobile}) {
     text-align: center;
     padding: 2rem;
     width: 100%;
